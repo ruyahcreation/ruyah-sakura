@@ -281,20 +281,26 @@
   
     /* MailerLite embedded form overrides */
     .ml-embedded { width: 100%; }
-    .ml-embedded .ml-form-embedWrapper { background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
-    .ml-embedded .ml-form-embedBody { padding: 0 !important; }
-    .ml-embedded .ml-form-embedContent { display: none !important; }
-    .ml-embedded .ml-form-fieldRow { display: flex; max-width: 400px; margin: 0 auto 16px; border: 1px solid rgba(184,134,78,0.45); background: rgba(255,255,255,0.55); backdrop-filter: blur(8px); transition: border-color 0.3s ease; padding: 0 !important; gap: 0; }
-    .ml-embedded .ml-form-fieldRow:focus-within { border-color: #B8864E; }
-    .ml-embedded .ml-field-group { flex: 1; border: none !important; padding: 0 !important; margin: 0 !important; }
-    .ml-embedded input[type="email"] { flex: 1; width: 100%; background: transparent !important; border: none !important; outline: none !important; padding: 16px 20px !important; font-family: 'Jost', sans-serif !important; font-size: 13px !important; font-weight: 300 !important; letter-spacing: 0.06em !important; color: #2C1810 !important; box-shadow: none !important; border-radius: 0 !important; }
-    .ml-embedded input[type="email"]::placeholder { color: rgba(44,24,16,0.3) !important; }
-    .ml-embedded .ml-form-embedSubmit { padding: 0 !important; margin: 0 !important; }
-    .ml-embedded button[type="submit"], .ml-embedded .ml-form-embedSubmit button { background: #6B2737 !important; border: none !important; outline: none !important; padding: 16px 24px !important; font-family: 'Jost', sans-serif !important; font-size: 10px !important; font-weight: 500 !important; letter-spacing: 0.25em !important; text-transform: uppercase !important; color: #F7F0E6 !important; cursor: pointer !important; transition: background 0.3s ease !important; white-space: nowrap !important; border-radius: 0 !important; width: auto !important; }
-    .ml-embedded button[type="submit"]:hover, .ml-embedded .ml-form-embedSubmit button:hover { background: #8B1A2A !important; }
-    .ml-embedded .ml-form-successBody { text-align: center; font-family: 'Jost', sans-serif; font-size: 11px; color: #6B2737; letter-spacing: 0.14em; text-transform: uppercase; }
-    .ml-embedded .ml-form-checkboxRow, .ml-embedded .ml-form-recaptcha { display: none !important; }
-</style>
+    .ml-form-embedContainer { margin: 0 !important; padding: 0 !important; }
+    .ml-form-align-center { text-align: left !important; }
+    .ml-form-embedWrapper.embedForm { background: transparent !important; border-radius: 0 !important; padding: 0 !important; }
+    .ml-form-embedBody.ml-form-embedBodyDefault { padding: 0 !important; background: transparent !important; }
+    .ml-form-embedContent { display: none !important; }
+    .ml-block-form { display: flex; max-width: 400px; margin: 0 auto 16px !important; border: 1px solid rgba(184,134,78,0.45); background: rgba(255,255,255,0.55); backdrop-filter: blur(8px); }
+    .ml-block-form:focus-within { border-color: #B8864E; }
+    .ml-form-formContent { display: flex; flex: 1; padding: 0 !important; }
+    .ml-form-fieldRow.ml-last-item { flex: 1; padding: 0 !important; margin: 0 !important; border: none !important; background: transparent !important; }
+    .ml-field-group { padding: 0 !important; border: none !important; background: transparent !important; }
+    .ml-embedded input.form-control[type="email"], .ml-embedded input[type="email"] { width: 100% !important; background: transparent !important; border: none !important; outline: none !important; box-shadow: none !important; border-radius: 0 !important; padding: 16px 20px !important; font-family: 'Jost', sans-serif !important; font-size: 13px !important; font-weight: 300 !important; letter-spacing: 0.06em !important; color: #2C1810 !important; }
+    .ml-embedded input.form-control[type="email"]::placeholder, .ml-embedded input[type="email"]::placeholder { color: rgba(44,24,16,0.3) !important; }
+    .ml-form-embedSubmit { padding: 0 !important; flex-shrink: 0; }
+    .ml-form-embedSubmit button.primary { background: #6B2737 !important; border: none !important; border-radius: 0 !important; padding: 16px 24px !important; font-family: 'Jost', sans-serif !important; font-size: 10px !important; font-weight: 500 !important; letter-spacing: 0.25em !important; text-transform: uppercase !important; color: #F7F0E6 !important; cursor: pointer !important; white-space: nowrap !important; width: auto !important; min-width: 0 !important; transition: background 0.3s ease !important; }
+    .ml-form-embedSubmit button.primary:hover { background: #8B1A2A !important; }
+    .ml-form-embedSubmit button.loading { display: none !important; }
+    .ml-form-embedSubmitLoad { display: none !important; }
+    .ml-form-successBody { text-align: center; background: transparent !important; padding: 16px 0 !important; }
+    .ml-form-successContent h4, .ml-form-successContent p { font-family: 'Jost', sans-serif !important; color: #6B2737 !important; font-size: 11px !important; letter-spacing: 0.14em !important; text-transform: uppercase !important; }
+    </style>
 <!-- MailerLite Universal -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
